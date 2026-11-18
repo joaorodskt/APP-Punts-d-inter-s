@@ -34,7 +34,6 @@ body {
 .mapa {
   width: 60%;
   height: 100%;
-  
 }
 
 /* ---------- Filtres ---------- */
@@ -124,7 +123,12 @@ select,
 }
 
 .dropzone.sobre {
-  background: #d6dadb;
+  background-color: #d6dadb;
+}
+
+.dropzoneOver {
+  background-color: rgb(241, 241, 241);
+  border: 2px dashed blue;
 }
 
 /* ---------- Responsive (mòbil: una sota l'altra) ---------- */
