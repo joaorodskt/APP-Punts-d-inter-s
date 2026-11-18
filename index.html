@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punts Interés</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.4/dist/leaflet.css">
+    <script type="importmap">
+    {"imports": {"leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-beta.4/dist/leaflet.js"}}
+    </script>
+    <script type="module" src="src/script.js"></script>
+</head>
+<body>
+    <main class="pagina">
+
+    <!-- COLUMNA ESQUERRA (40%) -->
+    <section class="panell">
+
+      <div class="filtres">
+        <div class="filtre">
+          <label for="tipus">Tipus:</label>
+          <select id="tipus">
+            <option value=""></option>
+          </select>
+        </div>
+
+        <div class="filtre">
+          <label for="ordenacio">Ordenació:</label>
+          <select id="ordenacio">
+            <option value="asc">Ascendent</option>
+            <option value="desc">Descendent</option>
+          </select>
+        </div>
+
+        <input type="text" id="filtre-nom" class="filtre-nom" placeholder="Filtrar per nom...">
+      </div>
+
+      <div id="llista" class="llista">
+        <p class="buit">No hi ha informació per mostrar</p>
+      </div>
+
+      <div class="peu">
+        <span id="total">Número total:</span>
+        <button type="button" id="netejar" class="btn-netejar">Netejar tot</button>
+      </div>
+
+      <div id="dropzone" class="dropzone">
+        Arrossegar un fitxer CSV aquí per carregar la informació
+      </div>
+
+    </section>
+
+    <!-- COLUMNA DRETA (60%) - aquí anirà el mapa -->
+    <section id="mapa" class="mapa"></section>
+
+  </main>
+</body>
+</html>

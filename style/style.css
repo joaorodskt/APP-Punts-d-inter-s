@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* ---------- Layout general ---------- */
+.pagina {
+  display: flex;
+  height: 100vh;
+}
+
+.panell {
+  width: 40%;
+  height: 100%;
+  background: #bfc3c4;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.mapa {
+  width: 60%;
+  height: 100%;
+  
+}
+
+/* ---------- Filtres ---------- */
+.filtres {
+  background: #f0b9b9;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 8px;
+}
+
+.filtre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.filtre select {
+  width: 100%;
+}
+
+select,
+.filtre-nom {
+  background: #e9e9ee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 6px;
+  font-size: 12px;
+}
+
+.filtre-nom {
+  grid-column: 1 / -1;
+  background: #fff;
+  width: 100%;
+  padding: 6px;
+}
+
+/* ---------- Llista ---------- */
+.llista {
+  flex: 1;
+  min-height: 0;
+  background: #f5dede;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.buit {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+/* ---------- Peu (total + botó) ---------- */
+.peu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 110px;
+}
+
+.btn-netejar {
+  background: #ff7b72;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 6px;
+  font-size: 11px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.btn-netejar:hover {
+  background: #f2635a;
+}
+
+/* ---------- Zona d'arrossegar CSV ---------- */
+.dropzone {
+  border: 2px dashed #111;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.dropzone.sobre {
+  background: #d6dadb;
+}
+
+/* ---------- Responsive (mòbil: una sota l'altra) ---------- */
+@media (max-width: 700px) {
+  .pagina {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .panell,
+  .mapa {
+    width: 100%;
+  }
+
+  .panell {
+    height: 90vh;
+  }
+
+  .mapa {
+    height: 60vh;
+  }
+}
